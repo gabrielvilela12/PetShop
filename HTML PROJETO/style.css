@@ -1,0 +1,240 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100vh;
+  width: 100%;
+  font-size: 100%;
+}
+
+/* VARIAVEIS GLOBAIS */
+
+:root {
+  --FundoBody: #f0f0f0;
+  --FundoAzul: #00d9ff;
+
+  --FontTitulo: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  --FontParagrafo: "Arial", sans-serif;
+}
+img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  border-radius: 5px;
+}
+
+body {
+  font-family: var(--FontParagrafo);
+  line-height: 1.6;
+  background-color: var(--FundoBody);
+  color: #333;
+}
+
+/* Titulos e paragráfos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  font-family: var(--FontTitulo);
+}
+main h2 {
+  background-color: var(--FundoAzul);
+  color: rgb(255, 255, 255);
+  font-size: 1.3em;
+}
+
+/* Header */
+header {
+  background-color: var(--FundoAzul);
+  color: white;
+}
+
+header nav a {
+  margin-right: 0.5em;
+  padding: 0.2em 0.8em;
+  text-decoration: none;
+  color: orange;
+  font-style: inherit;
+  font-weight: bolder;
+  background-color: black;
+  border: 4px solid transparent;
+  transition: 0.8s;
+}
+header nav a:hover {
+  border: 4px solid orange;
+}
+header nav {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 10px 0px;
+}
+#toposite {
+  width: 95%;
+  margin: auto;
+  background-color: #7cd8f9;
+}
+#toposite img {
+  padding-top: 0.6em;
+  width: 160px;
+}
+#toposite h1 {
+  font-size: 2.3em;
+}
+
+/* Main styles */
+
+/*** PERSONALIZADAS ***/
+/*CONTAINER centraliza e define tamanho do width em %*/
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* class produtos */
+.banner {
+  background-image: url(img/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 150px;
+}
+.produtos {
+  text-align: center;
+  padding: 0 1em 1em 1em;
+}
+.produtos img {
+  width: 220px;
+  height: 200px;
+}
+.produtos a {
+  padding: 0.2em;
+  border-radius: 10px;
+  font-size: 1.2em;
+  transition: 0.3s;
+}
+.produtos a:hover {
+  padding: 0.3em;
+  border-radius: 15px;
+  font-size: 1.3em;
+}
+.produtos a,
+.produtos a:hover {
+  text-decoration: none;
+  border: 3px solid black;
+  background-color: #00ff37;
+  color: white;
+}
+
+.produtos p {
+  padding-bottom: 0.5em;
+  font-size: 1em;
+}
+.pets {
+  background-color: #cccccc;
+}
+.pets figure {
+  display: flex;
+}
+/* class itens */
+
+.itens {
+  padding: 1em;
+  margin-top: 1em;
+  border: black solid 2px;
+  background-color: #d6d6d6;
+}
+/* FOOTER  */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 0.7em 0;
+}
+
+/* Resolução do site */
+@media only screen and (min-width: 760px) {
+  main h2 {
+    font-size: 1.5em;
+  }
+  /* PERSONALIZADAS */
+  .banner {
+    min-height: 280px;
+  }
+  .produtos {
+    display: flex;
+  }
+  #toposite {
+    display: flex;
+    align-items: center;
+  }
+  #toposite h1 {
+    margin-right: 3.3em;
+    flex: 1;
+  }
+  #toposite img {
+    padding-top: 0;
+    margin: 0;
+  }
+  .itens {
+    margin: 0.8em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header nav {
+    font-size: 1.2em;
+  }
+  main h2 {
+    font-size: 2.3em;
+  }
+  /* PERSONALIZADAS */
+
+  .banner {
+    min-height: 600px;
+  }
+  .produtos {
+    display: flex;
+    justify-content: space-around;
+  }
+  #toposite h1 {
+    font-size: 3em;
+    margin-right: 3em;
+  }
+}
+@media only screen and (min-width: 2500px) {
+  header nav {
+    font-size: 2.3em;
+  }
+  main h2 {
+    font-size: 3em;
+  }
+  footer {
+    font-size: 2em;
+  }
+  /* PERSONALIZADAS */
+
+  .banner {
+    min-height: 1000px;
+  }
+  .itens h3 {
+    font-size: 2.4em;
+  }
+  .itens p {
+    font-size: 2em;
+  }
+  #toposite img {
+    width: 450px;
+  }
+  #toposite h1 {
+    font-size: 7em;
+  }
+}
